@@ -1,7 +1,11 @@
 Run instructions
 ```
-    
+    cd datapipeline
+    docker build --tag datapipeline .
+    docker run --rm --volume ./data:/code/data datapipeline
+
 ```
+You should see two json files in the /data folder. The final json is the results.json file.
 
 Format of the normalized data    
 ```
