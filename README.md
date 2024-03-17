@@ -5,7 +5,11 @@ Run instructions
     docker run --rm --volume ./data:/code/data datapipeline
 
 ```
-You should see two json files in the /data folder. The final json is the results.json file.
+You should see two json files in the /data folder.
+
+- results.json is what you should be looking at. The entire file is valid json as verified by jsonlint.
+
+- normalized.json file is fetched data that is normalized. Each newline is a valid json but NOT the whole file.
 
 Format of the normalized data    
 ```
@@ -30,3 +34,5 @@ Format of the normalized data
         # easier for audits AND protects you from legal.
     },....]
 ```
+
+![compressedData](compressedData.png)

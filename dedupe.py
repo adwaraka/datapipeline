@@ -10,14 +10,16 @@ def dedupVendorData(fileName, frequency):
     for ip in ips:  # for every hostname that is duplicated
         jlists = []
         with open(fileName, 'r') as fp, open('./data/results.json', 'w') as fw:
+            fw.write("[")
             for line in fp.readlines():
                 val = json.loads(line)
                 if ip != val["hostname"]:
-                    fw.write(str(val) + '\n')
+                    fw.write(json.dumps(val) + ',\n')
                 else:
                     jlists.append(val)
             newData = merge_dict(jlists)
-            fw.write(str(newData) + "\n")
+            fw.write(json.dumps(newData) + "\n")
+            fw.write("]")
     return
 
 def merge_dict(dct):
