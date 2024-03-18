@@ -44,3 +44,8 @@ Format of the normalized data
 SCREENSHOT FROM JSONLINT WEBSITE
 
 ![compressedData](compressedData.png)
+
+
+VISUALIZE
+
+![ipCounts](ipCounts.png)
